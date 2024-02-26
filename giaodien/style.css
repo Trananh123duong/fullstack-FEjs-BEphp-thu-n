@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li {
+    /* không có biểu tượng hoặc ký hiệu nào sẽ được hiển thị bên cạnh các mục trong danh sách, cụ thể ở đây là dấu chấm trước mỗi mục */
+    list-style: none;
+}
+a {
+    /* Xóa gạch chân dưới của các liên kết */
+    text-decoration: none;
+    color: #000;
+}
+header {
+    /* Thuộc tính này biến phần tử <header> thành một flex container, 
+    làm cho các phần tử con của nó trở thành các flex items, 
+    cho phép chúng được sắp xếp và căn chỉnh dễ dàng, cụ thể ở đây là chiều ngang */
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 70px;
+    /* căn chỉnh các phần tử theo trục chính của container vào giữa */
+    align-items: center;
+}
+/* logo, menu và others là các class con flex items của các phần tử con của header
+số 1, 3, 1 là tỉ lệ chiều rộng của các phần tử con
+5 là tổng tỉ lệ chiều rộng của các phần tử con, số này có thể thay đổi tùy theo tổng số phần tử con và flex items của chúng */
+.logo {
+    flex: 1;
+}
+.menu {
+    flex: 3;
+    /* Thuộc tính này biến phần tử <menu> thành một flex container, 
+    và các phần tử con của nó trở thành các flex items, cho phép chúng được sắp xếp và căn chỉnh dễ dàng, cụ thể ở đây là chiều ngang */
+    display: flex;
+}
+.menu > li {
+    padding: 0 12px;
+}
+.menu > li a {
+    font-size: 12px;
+    /* Tô đậm chữ */
+    font-weight: bold;
+}
+.others {
+    flex: 1;
+    display: flex;
+}
+.others > li {
+    padding: 0 12px;
+}
+.others > li:first-child {
+    position: relative;
+}
+.others > li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+.others > li:first-child i {
+    position: absolute;
+    right: 10px;
+}
