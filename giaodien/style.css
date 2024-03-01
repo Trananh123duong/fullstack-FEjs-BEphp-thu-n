@@ -23,6 +23,10 @@ header {
     height: 70px;
     /* căn chỉnh các phần tử theo trục chính của container vào giữa */
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 /* logo, menu và others là các class con flex items của các phần tử con của header
 số 1, 3, 1 là tỉ lệ chiều rộng của các phần tử con
