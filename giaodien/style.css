@@ -136,3 +136,36 @@ số 1, 3, 1 là tỉ lệ chiều rộng của các phần tử con
 .dot.active {
     background-color: #333;
 }
+
+.app-container {
+    text-align: center;
+    align-items: center;
+    padding: 150px 0 50px 0;
+}
+.app-google {
+    margin: 50px;
+}
+.app-google img {
+    height: 50px;
+}
+.app-container p {
+    /* Thuộc tính line-height trong CSS được sử dụng để định dạng độ cao của dòng chữ trong một phần tử. 
+    Nó xác định khoảng cách giữa các dòng chữ bên trong phần tử đó. */
+    line-height: 20px;
+    /* Thuộc tính "letter-spacing" trong CSS được sử dụng để điều chỉnh khoảng cách giữa các ký tự trong một phần tử văn bản.
+    Bằng cách thay đổi giá trị của thuộc tính này, bạn có thể làm cho các ký tự trở nên rộng hơn hoặc hẹp hơn,
+    tạo ra hiệu ứng khoảng cách giữa các ký tự khác nhau. */
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+}
+.app-container input {
+    margin-top: 50px;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+    width: 400px;
+    text-align: center;
+    outline: none;
+}
