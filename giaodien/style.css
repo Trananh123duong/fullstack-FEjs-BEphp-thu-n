@@ -26,14 +26,25 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
+    background: rgba(255, 255, 255, 0.3);
+}
+header.sticky {
+    background: rgba(255, 255, 255, 1);
+}
+header:hover {
+    background: rgba(255, 255, 255, 1);
 }
 /* logo, menu và others là các class con flex items của các phần tử con của header
 số 1, 3, 1 là tỉ lệ chiều rộng của các phần tử con
 5 là tổng tỉ lệ chiều rộng của các phần tử con, số này có thể thay đổi tùy theo tổng số phần tử con và flex items của chúng */
 .logo {
     flex: 1;
+}
+.logo img {
+    height: 60px;
 }
 .menu {
     flex: 3;
@@ -47,7 +58,7 @@ số 1, 3, 1 là tỉ lệ chiều rộng của các phần tử con
 /* Menu con của menu Nữ */
 .menu > li:hover .sub-menu {
     visibility: visible;
-    top: 30px;
+    top: 50px;
 }
 .sub-menu {
     position: absolute;
@@ -57,6 +68,8 @@ số 1, 3, 1 là tỉ lệ chiều rộng của các phần tử con
     visibility: hidden;
     top: 50px;
     transition: 0.3s;
+    z-index: 1;
+    background: #fff;
 }
 .sub-menu ul {
     padding-left: 20px;
@@ -80,6 +93,21 @@ số 1, 3, 1 là tỉ lệ chiều rộng của các phần tử con
 }
 .others > li {
     padding: 0 12px;
+    position: relative;
+}
+.others > li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #cccccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.others >li:last-child::after {
+    display: none;
 }
 .others > li:first-child {
     position: relative;
@@ -88,6 +116,7 @@ số 1, 3, 1 là tỉ lệ chiều rộng của các phần tử con
     width: 100%;
     border: none;
     border-bottom: 1px solid #333;
+    background: transparent;
 }
 .others > li:first-child i {
     position: absolute;
