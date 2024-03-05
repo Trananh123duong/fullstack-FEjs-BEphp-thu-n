@@ -12,3 +12,21 @@
     flex-direction: row;
     align-items: center;
 }
+main ul {
+    list-style-type: decimal;
+    font-size: 19px;
+    font-weight: bold;
+}
+main ul li i {
+    font-size: 19px;
+}
+.price {
+    color: red;
+}
+header {
+    width: 100%;
+    text-align: center;
+}
+header h2 {
+    color: green;
+}
